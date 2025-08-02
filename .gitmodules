@@ -4,3 +4,9 @@
 [submodule "src/dmz"]
 	path = src/dmz
 	url = ssh://git@git.lan.tbk.fi:2222/tbk/dmz.git
+[submodule "src/www/content/st-restricted"]
+	path = src/www/content/st-restricted
+	url = ssh://git@git.lan.tbk.fi:2222/tbk/st-restricted.git
+[submodule "src/www/content/st-private"]
+	path = src/www/content/st-private
+	url = ssh://git@git.lan.tbk.fi:2222/tbk/st-private.git
