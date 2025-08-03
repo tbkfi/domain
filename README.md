@@ -3,14 +3,16 @@
 This repository contains full sources for the domain networks, hosts, sites, and
 services.
 
-Access is restricted by network topology and credentials. For a breakdown of
-clearance levels, see below.
+## Access levels
 
-## Clearance levels
+Each access level is scoped into its own subnet(s) and a virtual or physical
+router. Generally speaking resource access is mandated by the following logic
+within the access level: L2 > L3 > ACL, where the simplest form of control is
+preferred over others if it accomplishes the task.
 
-The clearance is defined by two factors: the active physical or virtual subnet,
-and the access control system running in that network. Starting from the
-least-restricted level onward:
+The `Public` tier is a bit of an outlier, and sits outside of the controlled
+levels with zero trust or fine-grained control. It's job is to serve a
+**static** frontend for the domain, nothing else.
 
 - **Public: WWW**  
   The basic version of the `www` site for the domain, and the content that is
@@ -22,7 +24,8 @@ least-restricted level onward:
   The standard open-to-internet tier of content and servers hosted only on
   controlled hardware (vps, co-location, or full-control). Has access to an
   increased swath of internal resources and content. Implements at least basic
-  logging and access control if appropriate based on resource type.
+  logging, access control if appropriate based on resource type, and aggressive 
+  IP-blocking based on country and other lists.
 
 - **Private: LAN**  
   The main physically isolated and secured network that implements full logging and
