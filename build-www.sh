@@ -17,11 +17,11 @@ link_content() {
 	local SRC_T="$PWD/src/$1"
 	local DST_T="$PWD/src/www/content/$1"
 
-	if [[ ! -d "$T" ]]; then
+	if [[ ! -d "$SRC_T" ]]; then
 		echo "Skipping: $T"
 		return 0
 	else
-		echo "Linking: $T"
+		echo "Linking: $SRC_T"
 
 		if [[ -d "$1" ]]; then
 			unlink "$DST_T" > /dev/null 2>&1

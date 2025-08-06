@@ -1,3 +1,5 @@
+/src/www/content/st-restricted
+/src/www/content/st-private
 /src/www/public
 /src/www/resources
 /src/www/.hugo_build.lock
