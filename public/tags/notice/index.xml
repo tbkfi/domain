@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notice on TBK</title>
+    <link>http://localhost:1313/tags/notice/</link>
+    <description>Recent content in Notice on TBK</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/notice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;ownership&#34;&gt;Ownership&lt;/h2&gt;&#xA;&lt;p&gt;This is a personal website currently available under the domain &lt;code&gt;tbk.fi&lt;/code&gt;, authored by&#xA;Tuomo Björk.&lt;/p&gt;&#xA;&lt;p&gt;All opinions expressed therein are my own, and listening to me is done at your own peril.&lt;/p&gt;&#xA;&lt;h2 id=&#34;security&#34;&gt;Security&lt;/h2&gt;&#xA;&lt;p&gt;All data stored and configured to be accessible via the &lt;code&gt;WWW-variant&lt;/code&gt; and &lt;code&gt;DMZ-variant&lt;/code&gt; of this site&#xA;is considered public information, with the exception of some stored log data such as IP-addresses of inbound connections.&lt;/p&gt;&#xA;&lt;p&gt;The author controlled variants of this website are hosted on servers that are configured to take advantage of the &lt;em&gt;GeoIP database&lt;/em&gt;,&#xA;&lt;em&gt;Emerging Open Threats rulesets&lt;/em&gt;, and other means to outright block access from certain countries, malicious host networks and addresses,&#xA;certain user agents, and requests that are detected to be malicious in nature. This results in the website and its host&#xA;not being visible to some networks and clients &lt;em&gt;by choice&lt;/em&gt; of the administrator.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Privacy</title>
+      <link>http://localhost:1313/privacy/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/privacy/</guid>
+      <description>&lt;h2 id=&#34;cookies-and-logging&#34;&gt;Cookies and Logging&lt;/h2&gt;&#xA;&lt;h3 id=&#34;cookies&#34;&gt;Cookies&lt;/h3&gt;&#xA;&lt;p&gt;This website does not implement cookies for tracking. If accessing the WWW-variant of the&#xA;website, the host platform (see &lt;a href=&#34;#WWW-variant&#34;&gt;below&lt;/a&gt;) may implement its own logging and/or tracking.&#xA;Additionally, some variants of the website may implement basic cookies to store access credentials&#xA;for certain resources when the user authenticates themselves to the webserver.&lt;/p&gt;&#xA;&lt;p&gt;Additional care is put into content hosted on this website, so it doesn&amp;rsquo;t load third-party&#xA;cookies or scripts when navigating on this site.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
