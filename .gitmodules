@@ -13,3 +13,6 @@
 [submodule "src/st-private"]
 	path = src/st-private
 	url = ssh://git@git.lan.tbk.fi:2222/tbk/st-private.git
+[submodule "src/www"]
+	path = src/www
+	url = ssh://git@git.lan.tbk.fi:2222/tbk/www.git
