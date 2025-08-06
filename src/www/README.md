@@ -2,6 +2,8 @@
 
 Sources for the `www` static site, builds via Hugo.
 
+Pls trigger.
+
 ## Structure
 
 ```
