@@ -1,15 +1,15 @@
-[submodule "src/lan"]
-	path = src/lan
-	url = ssh://git@git.lan.tbk.fi:2222/tbk/lan.git
 [submodule "src/dmz"]
 	path = src/dmz
 	url = ssh://git@git.lan.tbk.fi:2222/tbk/dmz.git
-[submodule "src/www/content/st-restricted"]
-	path = src/www/content/st-restricted
-	url = ssh://git@git.lan.tbk.fi:2222/tbk/st-restricted.git
-[submodule "src/www/content/st-private"]
-	path = src/www/content/st-private
-	url = ssh://git@git.lan.tbk.fi:2222/tbk/st-private.git
+[submodule "src/lan"]
+	path = src/lan
+	url = ssh://git@git.lan.tbk.fi:2222/tbk/lan.git
 [submodule "src/lab"]
 	path = src/lab
 	url = ssh://git@git.lan.tbk.fi:2222/tbk/lab.git
+[submodule "src/st-restricted"]
+	path = src/st-restricted
+	url = ssh://git@git.lan.tbk.fi:2222/tbk/st-restricted.git
+[submodule "src/st-private"]
+	path = src/st-private
+	url = ssh://git@git.lan.tbk.fi:2222/tbk/st-private.git
