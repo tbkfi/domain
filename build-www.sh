@@ -7,6 +7,7 @@
 # just symbolically link the 'st' sources to the site 'content' directory if they're
 # present and then build the site.
 #
+# * Give "dev" as $1, to run hugo in server mode
 
 link_content() {
 	if [[ -z "$1" ]]; then
@@ -14,27 +15,22 @@ link_content() {
 		return 1
 	fi
 	
-	local SRC_T="$PWD/src/$1"
-	local DST_T="$PWD/src/www/content/$1"
+	local SRC="$1"
+	local DST="$2"
+	local REL=$(realpath --relative-to="$DST" "$SRC")
 
-	if [[ ! -d "$SRC_T" ]]; then
-		echo "Skipping: $T"
-		return 0
+	if [[ ! -d "$SRC" ]]; then
+		echo "* SKIP: $SRC"
+		return 2
 	else
-		echo "Linking: $SRC_T"
-
-		if [[ -d "$1" ]]; then
-			unlink "$DST_T" > /dev/null 2>&1
-			rm -rf "$DST_T" > /dev/null 2>&1
-		fi
-
-		ln -s "$SRC_T" "$DST_T"
+		ln -s -f "$SRC" "$DST"
 		if (( $? )); then
-			echo "link: fail"
+			echo "* $SRC !! $DST"
+			return 1
+		else
+			echo "* $SRC -> $DST"
+			return 0
 		fi
-
-		echo "link: ok"
-		return 0
 	fi
 }
 
@@ -44,19 +40,25 @@ main() {
 	else
 		local P_WWW="$PWD/src/www"
 
+		# Dev
+		if [[ "$1" == "dev" ]]; then
+			local H_OPT="server --disableFastRender"
+		fi
+
 		if [[ ! -d "$P_WWW" ]]; then
 			echo "Directory not present: $P_WWW, quitting!"
 		else
 			# Content submodules
-			link_content "st-restricted"
-			link_content "st-private"
+			echo "> linking available content"
+			link_content "$PWD/src/st-restricted" "$PWD/src/www/content"
+			link_content "$PWD/src/st-private" "$PWD/src/www/content"
 
 			# Hugo build command
-			hugo --source "$P_WWW" --destination "$P_WWW/public"
+			hugo $H_OPT --source "$P_WWW" --destination "$P_WWW/public"
 		fi
 	fi
 }
 
 if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
-	main
+	main "$1"
 fi
