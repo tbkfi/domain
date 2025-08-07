@@ -1,6 +1,7 @@
 # Servers
 gate.dmz.tbk.fi	()
 gate.lan.tbk.fi	()
+gate.lab.tbk.fi	()
 
 # Email
 MX	tbk.fi		mail.postale.io
