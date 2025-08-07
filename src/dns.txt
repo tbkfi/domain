@@ -1,0 +1,10 @@
+MX	tbk.fi		mail.postale.io
+CNAME	autoconfig	mail.postale.io
+CNAME	autodiscover	mail.postale.io
+
+# SPF (soft-fail), DMARC (quarantine), DKIM
+TXT	"v=spf1 mx ~all"
+TXT	_dmarc		"v=DMARC1; p=quarantine; rua=mailto:dmarc@tbk.fi; ruf=mailto:admin@tbk.fi"
+TXT	s20250807490._domainkey	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsOi35hp+trrsNTQDBaKwX0Igw2TdAJ7VytWjvWVDxmZgIpI/SASi1AvDpY+8CdL+WxaY4lIGaQL1I9KXNDh8DZT5G0Erwh1lW7DD5t6gMG3yjjF7NjiCqRudUbRGbTrW0QemdmyRL6puPUTWRGXyBqQpmbw4skjeZWl8e7Oi4OqZImXyfFDNApjgpcy+6zn8j" "6IsxK0C3h" "+CF0Der6tGo8uopHajfWABJU4QDdO4RaZERvYPv7/e9n81FTrT2RxQ769G+27hYzjUCMB6hnNF2yJnkanB9vcF4omxhKkkelkCKfnqu9wmszIVV98X42locaQ3Dxj4dw7wsSvEsrWvDQIDAQAB"
+
+CNAME	WWW	tbk.pages.dev
