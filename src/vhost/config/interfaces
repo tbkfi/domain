@@ -1,0 +1,24 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# IF1: Physical
+allow-hotplug $DP_IF1
+iface $DP_IF1 inet static
+	address $DP_LAN_IP
+	netmask $DP_LAN_MASK
+	gateway $DP_LAN_GW
+	dns-nameservers $DP_LAN_DNS
+	mtu $DP_LAN_MTU
+
+# IF2: Virtual
+allow-hotplug $DP_IF2
+iface $DP_IF2 inet static
+	address $DP_VIRT_IP
+	netmask $DP_VIRT_MASK
+	mtu $DP_VIRT_MTU
